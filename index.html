@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bootstrap Tamworth</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="css/mystyle.css" rel="stylesheet" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
+</head>
+<body>
+    <!--nav start-->
+    <div class="navbar navbar-inverse navbar-static-top">
+        <div class="container">
+            <a href="index.html" class="navbar-brand">Bootstrap Tamworth</a>
+            <!--Collapsable menu here-->
+            <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="collapse navbar-collapse navHeaderCollapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#HTML">HTML &amp; CSS</a></li>
+                    <li><a href="#BoxModel">Box Model</a></li>
+                    <li><a href="#Scripting">Scripting Languages</a></li>
+                    <li><a href="#Functionality">Scripting Language Functionality</a></li>
+                    <li><a href="#Browser">Browser Implementation</a></li>
+                    <li><a href="#contact" data-toggle="modal"><span class="glyphicon glyphicon-inbox" aria-hidden="true"></span> Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--Nav End-->
+    
+    <!--jumbotron Start-->
+    <!--<div class="container">-->
+        <div class="jumbotron">
+            <!--Main Front Graphic-->
+            <img src="assets/Main%20Logo%20copy.png" width="50%" class="img-responsive center-block">
+            <p>Welcome to my Webpage. This site explains how different web designing languages, such as HTML, CSS and Scripting, are used and collated together to make a fully functioning website. If you found this site helpful, click the button below and follow my Twitter! You may find more helpful information.
+            </p>
+            <div class="text-center">
+                <a href="http://www.twitter.com/cade_meakin" target="_blank" class="btn btn-info">Follow me on Twitter</a>
+            </div>
+        </div>
+    <!--</div>-->
+    <!--jumbotron End-->
+    
+    <!--grid system Start-->
+    <div class="container" id="HTML">
+        <h1>How HTML Accesses CSS</h1>
+        <p>First of all, CSS stands for Cascading style sheets. It “is a style sheet language used for describing the presentation of a document written in a markup language.” -  Wiki</p>
+
+<p class="text-center">CSS is used to style web pages and it is used along side with HTML. Every Web page uses CSS because of ease of use. It can be implemented in either of three easy methods:
+        <li>External</li>
+        <li>Internal</li>
+        <li>Inline</li>
+        </p>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <img src="assets/Coding.jpeg" class="img-rounded" width="100%">
+            <div class="caption">
+                <h3>Inline CSS</h3>
+                <p>An inline style can be used if a style is to be applied to one element/event.
+Inline styles are quick and easy to apply. It is written directly in the “<code>h1</code>” of the code, and it overwrites any internal and external techniques. This is what makes it so quick and easy, but it has to be re-applied to every single event you want to use it in.
+E.g <code> h1 style="color:red; </code>
+                </p>
+                <p><strong>Advantages:</strong>
+<li>It is quick and easy to use if you are changing a single element.</li>
+<li>Saves the effort of creating an external file.</li>
+<li>It is also good for testing. This is because it is easier to correct lines of code from the source rather than changing the source</li>
+<li>It also loads quicker over the internet since it is all coming from one file.  (lower http requests).</li>
+<li>It can be used to debug pages that have errored.</li>
+                    <strong>Disadvantages:</strong>
+<li>If Inline would be the only thing to be used, every single element would have to have its own code, and for big websites, that just is not efficient enough. For example, if you wanted all the text to be bold, you would have to add the command to each <code>p</code><code>/p</code> tag on the document.</li>
+<li>Moreover, it will overwrite any other implementations of CSS since it is the most direct form of css. This could act as an annoyance to the designer.</li>
+
+
+                
+                <p><a href="http://www.w3schools.com/html/html_css.asp" target="_blank" class="btn btn-info">Read More</a></p>
+            </div>
+
+                </div>
+            </div>
+             <div class="col-md-4">
+                <div class="thumbnail">
+                    <img src="assets/Coding2.jpeg" class="img-rounded" width="100%">
+            <div class="caption">
+                <h3>Internal CSS</h3>
+                <p>Internal codes are embedded within the <code>head.../head</code> tag. Internal CSS dominates the rules of an external style sheet. So it can be used for a document with one single style. A <code>style</code> tag is used within the head tag.
+                </p>
+                <p><strong>Advantages:</strong>
+<li>Internal CSS can be used to implement a specific style to the whole document with just one entry. E.g. If the designer wants generally wants all text to be one colour, then he can add a tag in the internal section of the document and that would be all he would need to do.</li>
+<strong>Disadvantages:</strong>
+<li>Internal CSS loads very slowly due to low http requests. This can detract users from any website, since the average wait time is as low as 2 seconds.</li>
+                </p>
+                    <!--Internal CSS Code Example-->
+                <img src="assets/InternalCSS.png" class="img-rounded" width="74%">
+                
+                <p><a href="http://www.w3schools.com/html/html_css.asp" target="_blank" class="btn btn-info">Read More</a></p>
+            </div>
+
+                </div>
+            </div>
+             <div class="col-md-4">
+                <div class="thumbnail">
+                    <img src="assets/Computer.jpeg" class="img-rounded" width="95%">
+            <div class="caption">
+                <h3>External CSS</h3>
+                <p>External css is a separate document of css that is applied to multiple pages of HTML. It is saved with a .css file extension.  It is then referenced using a link within the head, instead of using <code>style</code>. This means an entire website can be changed with the modification of one small file.
+                </p>
+<p><strong>Advantages:</strong>
+<li>The file size of the HTML document is smaller since all the coding to do with styling is on another document.</li>
+<li>It is easier for developers to read and work with the coding because the HTML sheet is separated from the styling sheet.</li>
+<li>It also makes it so much easier to reuse your styling code, since it is stored on a separate sheet and can be copied onto other websites.</li>
+<li>It can also allow for a higher number of visitors, since it is more optimised for search engines.</li>
+
+
+<strong>Disadvantages:</strong>
+<li>It is not as useful for small websites, since they can get overloaded with information when a page gets deleted. This is because the code stays there when a page is deleted.</li>
+</p>
+                <!--External CSS Code Example-->
+                <img src="assets/ExternalCSS" class="img-rounded" width="100%">
+                
+                <p><a href="http://www.w3schools.com/html/html_css.asp" target="_blank" class="btn btn-info">Read More</a></p>
+            </div>
+
+                </div>
+            </div>
+        </div>               
+    </div>
+    <!--grid system End-->
+    
+    <!--Box Model Start-->
+    <!--Background Colour Change START-->
+    <div class="jumbotron" style="background-color:#89caff">
+
+    <div class="container" id="BoxModel">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="panel-header">
+                            <h2>How the Box Model Works <small><a href="http://www.w3schools.com/css/css_boxmodel.asp" target="_blank">ws3schools.com</a></small></h3>
+                        </div>
+                        <div class="text-center">
+                        <img class="featuredImg" src="assets/boxmodel.gif" width="50%">
+                        </div>
+                        
+                        <h4>The Box Model</h4>
+                        <p style="font-size:14px">In css, the box model is used to determine the design and layout of a HTML page.
+It usually consists of four elements:</p>
+                        <li style="font-size:14px">Margin</li>
+                        <li style="font-size:14px">Border</li>
+                        <li style="font-size:14px">Padding</li>
+                        <li style="font-size:14px">Content</li>
+                        <p style="font-size:14px">The box model is a set of standards for how web browsers will display any content on a webpage.</p>
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <!--Collapsible Box Model Description START-->         
+            <div class="col-lg-4">
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingOne">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Margin
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+      <div class="panel-body">
+        The margin is a transparent section of the box model and it clears the area around the border. Margins are able to collapse into one another so that each page blends nicely.
+      </div>
+    </div>
+  </div>
+                    <!--Second Collapsible Box-->
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingTwo">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Border
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+      <div class="panel-body">
+        The border goes around the padding and content. They can be either coloured or transparent. Borders are usually used for decorative purposes.
+      </div>
+    </div>
+  </div>
+                    <!--Third Collapsible Box-->
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingThree">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Padding
+        </a>
+      </h4>
+    </div>
+    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+      <div class="panel-body">
+        The padding is also transparent and it clears an area around the content. It is the same colour as the background colour that is being used for the box.
+      </div>
+    </div>
+  </div>
+                    <!--Fourth Collapsible Box-->
+                    <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingFour">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+          Content
+        </a>
+      </h4>
+    </div>
+    <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+      <div class="panel-body">
+        The content is where the images and text appear on the webpage. It is the main element of the box.
+      </div>
+    </div>
+  </div>
+</div>
+                <!--Code Box Model Example START-->
+ 
+                <pre>Here is an example of a box model:
+<code>div {
+	width: 300px;
+	border: 25px solid green;
+	padding: 25px;
+	margin: 25px;
+}</code>
+</pre>
+                <!--Code Box Model Example END-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Background Colour Change END-->
+</div>  
+                </div>
+    <!--Collapsible Box Model Description END-->
+<!--Box Model End-->
+        
+    <!--P3 START-->
+        
+<div class="container" id="Scripting">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="caption">
+                        <div class="panel-header">
+                            <h3>Fundamentals of a Scripting Language</h3>
+                        </div>
+                            
+        <p>All computer programs are created with a form of computer language. Most web pages use the HTML language to display information. However, if just HTML was used, web pages would look very boring and lifeless even though it would be displaying the important information. HTML combined with the use of CSS makes web pages look a lot more aesthetically nice and is what we usually see on web pages on the internet. CSS need scripting language.
+
+<br>
+<li style="text-align:center;">JavaScript</li>
+<li style="text-align:center;">Validation</li>
+<li style="text-align:center;">Optimisation</li>
+<li style="text-align:center;">Animation</li>
+<li style="text-align:center;">Security</li>
+
+<br>
+<h4>Javascript</h4>
+Javascript is the programming language of HTML. It controls the behaviour of the web pages. So along with HTML and CSS, Javascript is definitely a fundamental language to learn if you want to create and modify web pages. It is quite an easy language to learn and helps users to branch to harder and more specific languages too. 
+
+
+So there are three languages that need to be learned by a any web developer:
+<br>
+<li>HTML</li>
+<li>CSS</li>
+<li>JavaScript</li>
+                            
+                             <img class="img-responsive center-block" src="assets/HTML5_CSS_JavaScript.png" class="img-rounded" width="50%">
+
+<br>
+         This is because HTML is used to define what content is on a web page, CSS is used to determine the style, look and layout of a web page and JavaScript is used to program how the website works.
+</p>
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--P3 END-->
+
+    <!--M2 Start-->
+    
+    <!--Secondary Background Colour Change START-->
+<div class="jumbotron" style="background-color:#7C7C7C">
+      
+<div class="container" id="Functionality">
+    <div class="row">
+            <div class="col-lg-12">
+                <!--First Information Box START-->
+                <div class="panel panel-default">
+                    <div class="panel-body" style="background-color:#7C7C7C">
+                        <h2 style="color:#2bc3ff">How Scripting Languages Improve Functionality</h2>
+        
+            <p  style="font-size:14px;color:white">A Scripting Language is a tool used to fulfill relatively simple tasks such as creating interactive functions for the user. It is not as good as full programming languages, but it doesn’t always need to be for what it is used for. As i’ve mentioned, HTML is used to display content and define it on a webpage, but Javascript or php may be used to make it more of a dynamic webpage. JavaScript is what makes the website functional and interactive for users. These scripting languages can be implemented into a html file so as to create interactive menus for users and so on.            
+<br>
+                        </p>
+                        </div>
+                    </div>
+                <!--First Information Box END-->
+                </div>
+    </div>
+            <!--Gridded Image and Information-->
+    <div class="row">
+            <div class="col-lg-4">
+    
+                    <img src="assets/Wireframe.jpeg" class="img-rounded" width="100%">
+        </div>
+            <div class="col-lg-8">
+                    <!--Second Information Box START-->
+                        <div class="panel panel-default">
+                    <div class="panel-body" style="background-color:#7C7C7C">
+    <p style="font-size:14px;color:white">
+        <br>
+The use of a scripting language is that it makes websites more interactive because the page will respond to the users actions instantly. JavaScript is the main client side scripting language of the web, and if a website uses JavaScript effectively, then it can add user prompts, navigation assistance and other kinds of client side calculations. It can make web pages more user friendly once the page has been delivered to a user. It is important to have recent browsers though, such as Google Chrome and FireFox, since scripts may not work properly on outdated browsers.
+
+                        </p>
+                    </div>
+                </div>
+                <!--Second Information Box END-->
+            </div>
+        </div>
+    <!--Collapsible Models START-->
+    <br>
+<div class="col-lg-8 col-lg-offset-2" align="center">
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingOne">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Front-end Context
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+      <div class="panel-body" style="border-color:#2bc3ff">
+        Front-end context uses scripting through the user interface. For example, this is how a web page may resize information and boxes to fit the interface of the user, whether it is mobile or desktop.
+      </div>
+    </div>
+  </div>
+                    <!--Second Collapsible Box-->
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingTwo">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Client-side Calculations
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+      <div class="panel-body" style="border-color:#2bc3ff">
+        Client-side calculations are where any interactive scripting language commands are executed on the user's computer, since the calculations are done  from the user’s side instead of the servers side.
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
+    
+    <!--Collapsible Models END-->
+    </div>    
+</div>
+    <!--Secondary Background Colour Change END-->
+    
+
+    <!--M2 End-->
+
+    <!--D1 Start-->
+
+    <!--First Box START-->
+    <div class="container" id="Browser">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="panel-header">
+                            <h3>How Web Pages using Scripts are Implemented into Different Browsers</h3>
+                        </div>
+                        <br>
+    <p>JavaScript will display differently on each browser, since each browser is usually  programmed to deal with the javascript in a different manor. With there being many different kinds of browsers on the market, it is wise to test and make sure each browser deals with the scripting how you would want it to.
+                        <br>
+                        <br>
+    To test this efficiently, it would be wise to check what the most used browsers currently are and how they would deal with code. It would also be a smart idea to make sure the code works best for the most used browser. Here is a chart below to show this information:
+                        </p>
+
+    <!--Table START-->
+    <div  class="col-lg-12">
+    <img src="assets/Browsers.png" width="100%">
+    </div>
+                        <!--Table Website Link-->
+                        <p><small><a href="http://www.w3schools.com/browsers/default.asp" target="_blank">Information Gathered From ws3schools.com</a></small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!--Table END-->
+    <!--First Box END-->
+
+    <!--Second Box START-->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="panel-header">
+                            <h3>Browser Detection</h3>
+                         </div>
+    <p>As you can see on the table above, Chrome is the most used browser by far, and its popularity is rising every month. So it would be smart to base your scripting to work off of chrome,  but still so that it would work on these other browsers. To do this we need to make all scripting display the same; or as close to being the same as possible. This is called Browser Detection.
+        <br>
+        <br>
+    Browser Detection is very important for developers, since it allows the developer to see how optimal the scripting is for all browsers, and not just one of them. The detection process is to make sure that the right code is used for the browser in use to allow the website to work at its best.  All browsers are programmed differently which means that client side scripts would be shown differently on a client’s browser. CSS code should all look the same on all browsers but with JavaScript it can be wrong. This is why it has to be tested and told how to look.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+    <!--Second Box END-->
+    <!--Third Box START-->
+
+    
+            <div class="col-lg-6">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="panel-header">
+                            <h3>Object Detection</h3>
+                         </div>
+    <p>Object Detection works in a similar way, but instead of just showing what it would look like on each browser, it reads which browser and version is being used and it adds code to make the script compatible with the browser. It may check if the script is compatible or not, and if it is not, it simply will not go through with the process.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            
+            <!--Browser Detecting Code Example-->
+            
+            <pre style="text-align: center">
+            <h6><strong>This is what a browser detecting code may look like:</strong></h6>
+<code>if (bowser.msie && bowser.version <= 6) {
+  alert('Hello China');
+}</code>
+            </pre>
+            
+        </div>
+</div>
+
+    <!--Third Box END-->
+
+    <!--D1 END-->
+
+    
+    <!--Footer Start-->
+    <div class="navbar navbar-default navbar-fixed-bottom">
+        <div class="container">
+            <p class="navbar-text">Site built by Cade Meakin</p>
+            <a class="navbar-btn btn-success btn pull-right" href="#contact" data-toggle="modal">Contact</a>
+        </div>
+    </div>
+    <!--Footer End-->
+    
+    <!--Modal Start-->
+    <div class="modal fade" id="contact" role="dialog">
+         <div class="modal-dialog">
+            <div class="modal-content">
+                <!--Form Start-->
+                <form class="form-horizontal">
+                <!--HEADER-->
+                <div class="modal-header">
+                    <h4>Contact Me</h4>
+                    <!--BODY-->
+                    <div class="modal-body">
+                    
+                        <div class="form-group"><!--name-->
+                            <label for="contact-name" class="col-lg-2 control-label">Name</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" id="contact-name" placeholder="Full Name">
+                            </div>
+                        </div>
+                         <div class="form-group"><!--email-->
+                            <label for="contact-email" class="col-lg-2 control-label">Email</label>
+                            <div class="col-lg-10">
+                                <input type="email" class="form-control" id="contact-email" placeholder="name@example.com">
+                            </div>
+                        </div>
+                        <div class="form-group"><!--message-->
+                            <label for="contact-msg" class="col-lg-2 control-label">Message</label>
+                            <div class="col-lg-10">
+                                <textarea class="form-control" rows="8"></textarea>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <!--FOOTER-->
+                    <div class="modal-footer">
+                    <button class="btn btn-primary" type="submit">Submit</button>
+                    <a class="btn btn-danger" data-dismiss="modal">x</a>
+                    </div>
+                </div>
+            </form>
+            <!--Form End-->
+        </div>
+    </div> 
+</div>
+    <!--Modal End-->
+    
+    <!--Script Sart-->
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
